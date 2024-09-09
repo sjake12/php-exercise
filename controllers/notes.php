@@ -1,18 +1,10 @@
 <?php
-
 $config = require "./config.php";
 $db = new Database($config['database']);
 
 $header = "Notes";
-$usersQuery = "SELECT * FROM users";
+$query = "SELECT * FROM users";
 
-
-function users($db, $query)
-{
-    return $db->query($query)->fetchAll();
-}
-
-
-$users = users($db, $usersQuery);
+$users = $db->query($query)->fetchAll();
 
 require "./views/notes.view.php";
