@@ -9,11 +9,11 @@ require "partials/banner.php";
         <p class="text-blue-500 underline mb-6">
             <a href="./notes">go back...</a>
         </p>
-        <?php foreach ($notes as $note) : ?>
-            <p class="font-bold text-lg">
-                <?= $note['body'] ?>
-            </p>
-        <?php endforeach ?>
+
+        <p class="font-bold text-lg">
+            <?= $note['body'] ?>
+        </p>
+
     </div>
 </main>
 
