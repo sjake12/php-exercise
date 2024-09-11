@@ -9,7 +9,10 @@ require "partials/banner.php";
         <?php foreach ($notes as $note) : ?>
             <li><a href="./note?id=<?= $note['id'] ?>" class="hover:underline"><?= $note['body'] ?></a></li>
         <?php endforeach ?>
+
+        <p class="text-blue-500 underline font-semibold mt-4">
+            <a href="/php-exercise/note-create">Create new note...</a>
+        </p>
     </div>
 </main>
-
 <?php require "partials/footer.php"; ?>
