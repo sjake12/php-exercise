@@ -7,7 +7,7 @@ require "partials/banner.php";
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <!-- Your content -->
         <?php foreach ($notes as $note) : ?>
-            <li><a href="./note?id=<?= $note['id'] ?>" class="hover:underline"><?= $note['body'] ?></a></li>
+            <li><a href="./note?id=<?= $note['id'] ?>" class="hover:underline"><?= htmlspecialchars($note['body']) ?></a></li>
         <?php endforeach ?>
 
         <p class="text-blue-500 underline font-semibold mt-4">
