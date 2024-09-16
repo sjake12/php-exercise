@@ -1,7 +1,7 @@
 <?php
 
 return [
-    '/php-exercise/' => "./controllers/index.php",
+    '/php-exercise/public/' => "./controllers/index.php",
     '/php-exercise/about' => './controllers/about.php',
     '/php-exercise/notes' => './controllers/notes/index.php',
     '/php-exercise/note' => './controllers/notes/note.php',
