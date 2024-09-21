@@ -11,15 +11,15 @@
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="/php-exercise/public/"
-                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/php-exercise/public/") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>"
+                                <a href="/"
+                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>"
                                     aria-current="page">Dashboard</a>
-                                <a href="/php-exercise/about"
-                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/php-exercise/about") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>">About</a>
-                                <a href="/php-exercise/notes"
-                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/php-exercise/notes") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>">Notes</a>
-                                <a href="/php-exercise/contact"
-                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/php-exercise/contact") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>">Contact
+                                <a href="/about"
+                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/about") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>">About</a>
+                                <a href="/notes"
+                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/notes") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>">Notes</a>
+                                <a href="/contact"
+                                    class="rounded-md px-3 py-2 text-sm font-medium <?= urlIs("/contact") ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white" ?>">Contact
                                     Us</a>
                             </div>
                         </div>

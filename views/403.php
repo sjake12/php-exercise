@@ -8,7 +8,7 @@ require "partials/nav.php";
         <!-- Your content -->
         <h1 class="text-2xl font-bold">You are not authorized to access this page.</h1>
         <p class="cursor-pointer hover:underline">
-            <a href="/php-exercise/">Go back home.</a>
+            <a href="/">Go back home.</a>
         </p>
     </div>
 </main>
