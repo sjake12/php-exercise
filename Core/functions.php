@@ -1,5 +1,7 @@
 <?php
 
+use Core\Response;
+
 function dd($value)
 {
     echo "<pre>";
@@ -9,24 +11,24 @@ function dd($value)
     die();
 }
 
-function urlIs($value)
+function urlIs($value): bool
 {
     return $_SERVER['REQUEST_URI'] === $value;
 }
 
-function authorize($condition, $status = Response::FORBIDDEN)
+function authorize($condition, $status = Response::FORBIDDEN): void
 {
     if (! $condition) {
         abort($status);
     }
 }
 
-function base_path($path)
+function base_path($path): string
 {
     return BASE_PATH . $path;
 }
 
-function view($path, $header = [])
+function view($path, $header = []): void
 {
     extract($header);
     require base_path("views/$path");

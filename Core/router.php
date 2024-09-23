@@ -1,11 +1,13 @@
 <?php
 
+use JetBrains\PhpStorm\NoReturn;
+
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = require base_path('routes.php');
 
 
-function routeToController($uri, $routes)
+function routeToController($uri, $routes): void
 {
     if (array_key_exists($uri, $routes)) {
         require base_path($routes[$uri]);
@@ -14,7 +16,8 @@ function routeToController($uri, $routes)
     }
 }
 
-function abort($code = 404)
+#[NoReturn]
+function abort($code = 404): void
 {
     http_response_code($code);
 

@@ -1,4 +1,8 @@
 <?php
+
+use Core\Database;
+use Core\Validator;
+
 require base_path('Core/Validator.php');
 
 $config = require base_path('config.php');
@@ -24,5 +28,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 view("/notes/create.view.php", [
     'header' => "New note",
-    'errors' => $errors
+    'errors' => $errors,
 ]);
