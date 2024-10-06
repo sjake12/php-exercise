@@ -1,5 +1,4 @@
 <?php
-require base_path('bootstrap.php');
 
 use Core\Validator;
 use Core\App;

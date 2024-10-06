@@ -4,7 +4,7 @@ namespace Core;
 
 class App {
 
-  protected static $container;
+  protected static Container $container;
   public static function setContainer($container)
   {
     static::$container = $container;

@@ -1,7 +1,5 @@
 <?php
 
-require base_path('bootstrap.php');
-
 use Core\App;
 use Core\Database;
 
