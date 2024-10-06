@@ -11,7 +11,7 @@ require base_path("views/partials/banner.php");
         <?php endforeach ?>
 
         <p class="text-blue-500 underline font-semibold mt-4">
-            <a href="/note-create">Create new note...</a>
+            <a href="/note/create">Create new note...</a>
         </p>
     </div>
 </main>

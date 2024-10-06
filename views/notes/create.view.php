@@ -10,7 +10,7 @@ require base_path("views/partials/banner.php");
             <a href="/notes">go back...</a>
         </p>
 
-        <form method="post">
+        <form method="post" action="/notes">
             <div class="col-span-full">
                 <label for="body" class="block text-sm font-medium leading-6 text-gray-900">Fill in note body</label>
                 <div class="mt-2">
