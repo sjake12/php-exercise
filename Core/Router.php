@@ -3,73 +3,48 @@ namespace Core;
 class Router {
   protected array $routes = [];
 
-  public function get($uri, $controller): void
+  public function add($method, $uri, $controller): void
   {
     $this->routes[] = [
       'uri' => $uri,
       'controller' => $controller,
-      'method' => 'GET'
+      'method' => $method
     ];
   }
-  public function post($uri, $controller): void {
-    $this->routes[] = [
-      'uri' => $uri,
-      'controller' => $controller,
-      'method' => 'POST'
-    ];
+  public function get($uri, $controller): void
+  {
+    $this->add('GET', $uri, $controller);
   }
-  public function put($uri, $controller): void {
-    $this->routes[] = [
-      'uri' => $uri,
-      'controller' => $controller,
-      'method' => 'PUT'
-    ];
+  public function post($uri, $controller): void
+  {
+    $this->add('POST', $uri, $controller);
   }
-  public function delete($uri, $controller): void {
-    $this->routes[] = [
-      'uri' => $uri,
-      'controller' => $controller,
-      'method' => 'DELETE'
-    ];
+  public function put($uri, $controller): void
+  {
+    $this->add('PUT', $uri, $controller);
+  }
+  public function delete($uri, $controller): void
+  {
+    $this->add('DELETE', $uri, $controller);
   }
 
-  public function route($uri, $method){
+  public function route($uri, $method)
+  {
     foreach ($this->routes as $route) {
-      if ($route['uri'] === $uri){
+      if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
         return require base_path($route['controller']);
       }
     }
 
     $this->abort();
-    return null;
   }
 
-  protected function abort($code = 404): void {
+  protected function abort($code = 404): void
+  {
     http_response_code($code);
 
-    require base_path("./views/{$code}.php");
+    require base_path("./views/$code.php");
 
     die();
   }
 }
-
-
-//
-//function routeToController($uri, $routes): void
-//{
-//    if (array_key_exists($uri, $routes)) {
-//        require base_path($routes[$uri]);
-//    } else {
-//        abort();
-//    }
-//}
-//function abort($code = 404)
-//{
-//    http_response_code($code);
-//
-//    require base_path("./views/{$code}.php");
-//
-//    die();
-//}
-//
-
