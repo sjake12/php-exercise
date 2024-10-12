@@ -26,8 +26,7 @@ require base_path("views/partials/banner.php");
           <?php
           if (isset($errors['body'])) : ?>
             <p class="mt-3 text-sm text-red-500"><?= $errors['body'] ?></p>
-          <?php
-          endif; ?>
+          <?php endif; ?>
         </div>
         <button type="submit"
                 class="mt-4 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
